@@ -4,6 +4,12 @@ variable "auto_upgrade" {
   type        = bool
 }
 
+variable "expose_config" {
+  default     = false
+  description = "(Optional) A boolean value indicating whether the module should expose cluster config as output."
+  type        = bool
+}
+
 variable "k8s_version" {
   description = "(Required) The slug identifier for the version of Kubernetes used for the cluster."
   type        = string
