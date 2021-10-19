@@ -19,3 +19,13 @@ output "k8s_cluster_token" {
   value = var.expose_config ? digitalocean_kubernetes_cluster.this.kube_config[0].token : null
   sensitive = true
 }
+
+output "k8s_cluster_client_certificate" {
+  value     = var.expose_config ? digitalocean_kubernetes_cluster.this.kube_config[0].client_certificate : null
+  sensitive = true
+}
+
+output "k8s_cluster_client_key" {
+  value     = var.expose_config ? digitalocean_kubernetes_cluster.this.kube_config[0].client_key : null
+  sensitive = true
+}
